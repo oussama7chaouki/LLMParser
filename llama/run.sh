@@ -1,22 +1,7 @@
 #!/bin/bash
 
 PROJECT_LIST=(
-  'HealthApp'
-  'OpenStack'
-  'OpenSSH'
-  'Proxifier'
-  'HPC'
-  'Zookeeper'
-  'Mac'
-  'Hadoop'
-  'Linux'
-  'Android'
   'HDFS'
-  'BGL'
-  'Windows'
-  'Apache'
-  'Thunderbird'
-  'Spark'
 )
 
 percentage="$1"
