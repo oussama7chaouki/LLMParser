@@ -114,6 +114,8 @@ python evaluator.py --model "flan-t5-base" \
     --systems "Mac,Android,Thunderbird,HealthApp,OpenStack,OpenSSH,Proxifier,HPC,Zookeeper,Hadoop,Linux,HDFS,BGL,Windows,Apache,Spark" 
 ```
 
+!python eval.py --base_model '../LLMs/llama-7b-hf' --project "HDFS"  --percentage "0.025" --batch 5
+
 ## Evaluation Results
 ### RQ1: What is the accuracy of LLM?
 <p align="center"><img src="docs/tab2.png" width="800"></p>
