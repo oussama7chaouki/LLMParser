@@ -116,7 +116,7 @@ def get_unseen_logs(project, precentage):
     template_list = seen_template(project, precentage)
     predict_logs = []
     predict_log_template = []
-    prediction_file = "../output/{}/{}/{}/".format(
+    prediction_file = "../output/{}/{}/{}/prediction.csv".format(
         args.model, project, args.train_percentage
     )
     with open(prediction_file) as f:
