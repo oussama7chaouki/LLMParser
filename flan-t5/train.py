@@ -37,7 +37,7 @@ parser.add_argument(
 )
 parser.add_argument("--validation", type=str, default="validation")
 args = parser.parse_args()
-
+repository_name="oussamachaouki/LLMParser_Flan"
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 use_cuda = True
@@ -405,6 +405,8 @@ for project in project_list:
                     # save_dir = os.path.join(output_dir, 'bestepoch')
                     plm.save_pretrained(output_dir)
                     tokenizer.save_pretrained(output_dir)
+                    plm.push_to_hub(repository_name)
+                    tokenizer.push_to_hub(repository_name)
                     # test
                     print("\n\nepoch{}------------test------------".format(epoch))
                     predictions,ground_truths,test_acc = evaluate(
@@ -416,6 +418,8 @@ for project in project_list:
     if not validation:
         plm.save_pretrained(output_dir)
         tokenizer.save_pretrained(output_dir)
+        plm.push_to_hub(repository_name)
+        tokenizer.push_to_hub(repository_name)
     finish_time = datetime.now()
     duration = finish_time - start_time
 
